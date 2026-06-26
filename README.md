@@ -10,51 +10,7 @@ AI SOC Assistant acts as a virtual tier-1 analyst. It digests raw alert logs fro
 
 ---
 
-## Architecture
 
-The project follows a clean, decoupled service architecture:
-
-```mermaid
-graph TD
-    subgraph Frontend (React SPA)
-        UI[Vite + React Dashboard]
-    end
-
-    subgraph Backend (FastAPI Services)
-        API[FastAPI Router]
-        Parser[Alert Parser]
-        Mitre[MITRE ATT&CK Mapper]
-        Extractor[IOC Extractor]
-        VT[VirusTotal Service]
-        Abuse[AbuseIPDB Service - Offline Mock]
-        ES[Elasticsearch Service - Offline Mock]
-        AI[AI Alert Analysis Service]
-        Invest[Investigation Service]
-        Report[Incident Report Generator]
-    end
-
-    subgraph External APIs & Storage
-        Groq[Groq Llama 3 API]
-        VT_API[VirusTotal v3 API]
-        Local_JSON[mitre_mapping.json]
-    end
-
-    UI -->|JSON HTTP Request| API
-    API --> Parser
-    API --> Mitre
-    API --> Extractor
-    API --> VT
-    API --> AI
-    API --> Invest
-    API --> Report
-
-    Mitre -->|Reads| Local_JSON
-    VT -->|IP/Domain/URL/Hash Lookups| VT_API
-    AI -->|System/User Prompt| Groq
-    Invest -->|Playbook Prompts| Groq
-```
-
----
 
 ## Features
 
