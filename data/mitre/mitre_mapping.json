@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "description": "Local MITRE ATT&CK mapping file for AI SOC Assistant.",
+  "techniques": [
+    {
+      "technique_id": "T1110",
+      "technique_name": "Brute Force",
+      "tactic": "Credential Access",
+      "description": "Adversaries may attempt to gain access to valid accounts by repeatedly trying passwords or authentication tokens.",
+      "keywords": ["failed password", "failed logon", "brute force", "password spray"]
+    },
+    {
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts",
+      "tactic": "Initial Access",
+      "description": "Adversaries may obtain and abuse credentials of existing accounts to access systems.",
+      "keywords": ["valid account", "accepted password", "successful login", "credential abuse"]
+    },
+    {
+      "technique_id": "T1059",
+      "technique_name": "Command and Scripting Interpreter",
+      "tactic": "Execution",
+      "description": "Adversaries may abuse command and scripting interpreters to execute arbitrary commands.",
+      "keywords": ["powershell", "cmd.exe", "shell", "script execution"]
+    }
+  ]
+}
