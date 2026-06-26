@@ -1,0 +1,7 @@
+{
+  "alert_id": "WIN-4625-001",
+  "source": "windows-security",
+  "title": "Multiple failed logon attempts",
+  "description": "Windows Security log shows repeated failed logon attempts for a privileged account from an internal workstation.",
+  "severity": "medium"
+}

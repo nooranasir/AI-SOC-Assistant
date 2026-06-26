@@ -1,0 +1,3 @@
+2026-06-25T10:30:01Z auth-service INFO user=analyst action=login status=success source=10.0.1.15
+2026-06-25T10:34:18Z auth-service WARN user=analyst action=login status=failed source=10.0.1.15
+2026-06-25T10:34:41Z auth-service WARN user=analyst action=login status=failed source=10.0.1.15

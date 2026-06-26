@@ -1,0 +1,42 @@
+{
+  "alerts": [
+    {
+      "id": "1719312345.1",
+      "timestamp": "2026-06-25T10:42:11Z",
+      "agent": {
+        "id": "001",
+        "name": "wazuh-agent-01"
+      },
+      "rule": {
+        "id": "5715",
+        "level": 10,
+        "description": "sshd: multiple failed logins for user analyst",
+        "groups": ["authentication_failed", "sshd"]
+      },
+      "data": {
+        "srcip": "192.0.2.25",
+        "dstuser": "analyst"
+      },
+      "full_log": "Jun 25 10:42:11 wazuh-agent-01 sshd[2417]: Failed password for invalid user admin from 192.0.2.25 port 55822 ssh2"
+    },
+    {
+      "id": "1719312450.2",
+      "timestamp": "2026-06-25T10:45:50Z",
+      "agent": {
+        "id": "001",
+        "name": "wazuh-agent-01"
+      },
+      "rule": {
+        "id": "5501",
+        "level": 7,
+        "description": "Successful SSH login after repeated failures",
+        "groups": ["authentication_success", "sshd"]
+      },
+      "data": {
+        "srcip": "192.0.2.25",
+        "dstuser": "analyst"
+      },
+      "full_log": "Jun 25 10:45:50 wazuh-agent-01 sshd[2417]: Accepted password for analyst from 192.0.2.25 port 55822 ssh2"
+    }
+  ]
+}
